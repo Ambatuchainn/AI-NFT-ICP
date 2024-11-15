@@ -1,0 +1,37 @@
+{
+  "canisters": {
+    "AI-FT-backend": {
+      "main": "src/AI-FT-backend/main.mo",
+      "type": "motoko"
+    },
+    "AI-FT-frontend": {
+      "dependencies": [
+        "AI-FT-backend"
+      ],
+      "source": [
+        "src/AI-FT-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "AI-FT-frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
